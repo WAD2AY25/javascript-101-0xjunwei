@@ -83,7 +83,7 @@ function ex4(persons) {
     */
   let age = 9999;
   for (let i = 0; i < persons.length; i++) {
-    if (persons[i].age < age) {
+    if (persons[i].age < age && persons[i].name == "The Chosen One") {
       age = persons[i].age;
     }
   }
