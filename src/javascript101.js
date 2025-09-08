@@ -1,21 +1,19 @@
-
 function ex1() {
-    /*
+  /*
         TODO: return the value of newperson.firstName and the value of newcars[0] as a concatenated string
     */
-    var cars = ["Saab", "Volvo", "BMW"];
-    var newcars = cars;
-    var person = {firstName: "Yournal", lastName: "Drunk", age: 50};
-    var newperson = person;
-    person.firstName = "Jun";
-    cars[0] = "what";
-    
-    return "" // e.g., "YournalSaab"
+  var cars = ["Saab", "Volvo", "BMW"];
+  var newcars = cars;
+  var person = { firstName: "Yournal", lastName: "Drunk", age: 50 };
+  var newperson = person;
+  person.firstName = "Jun";
+  cars[0] = "what";
 
+  return person.firstName.concat(newcars[0]); // e.g., "YournalSaab"
 }
 
 function ex2() {
-    /*
+  /*
         TODO: 
             - run the given Javascript expression in JavaScript console 
             - return all the results together as a concatenated string
@@ -32,24 +30,34 @@ function ex2() {
             console.log(true != true)
 
     */
+  let firstPart =
+    5 +
+    "34" +
+    ("Bob" - "bill") +
+    (5 - "4") +
+    (5 % 10) +
+    (true + true) +
+    (false - true) +
+    (5 >= 1) +
+    ("A" > "B") +
+    ("a" > "A") +
+    (true != true);
 
-    return "" // e.g., the result of the first two expressions is "534NaN"
-
+  return firstPart; // e.g., the result of the first two expressions is "534NaN"
 }
 
 function ex3(firstNumber, secondNumber) {
-    /*
+  /*
         TODO:
             - validate if both firstNumber and secondNumber are Numbers
             - if yes, return the sum of the two numbers
             - else return the string "NaN"
 
     */
-      
 }
 
 function ex4(persons) {
-    /*
+  /*
         TODO:
             - Given persons list, loop through the list
             - find the Youngest person called “The Chosen One”
@@ -69,12 +77,11 @@ function ex4(persons) {
         (in this example, the function return 44)
     */
 
-    return ""
-   
+  return "";
 }
 
 function ex5(str) {
-    /*
+  /*
      TODO:
             - Given a string, check whether the string is a palindrome or not.
             - if yes, return the Boolean true
@@ -84,13 +91,11 @@ function ex5(str) {
 
     */
 
-    return ""
-
+  return "";
 }
 
-
 function computeAverageScore(students) {
-    /*
+  /*
     TODO: Complete computeAverageScore function so that it
         - calculate average score of students
         - return average score
@@ -106,14 +111,13 @@ function computeAverageScore(students) {
         (in this example, the function return 60)
 
     */
-    let result = 0
-   
+  let result = 0;
 
-    return result
+  return result;
 }
 
 function checkStatus(student) {
-/*
+  /*
     Complete checkStatus function so that it
         - check the score of a given student
         - return "Pass" if the score is >= 50; otherwise "Fail"
@@ -123,8 +127,6 @@ function checkStatus(student) {
           
         (in this example, the function return 'Pass')
 */
-   
 }
 
-module.exports = { ex1, ex2, ex3, ex4, ex5, computeAverageScore, checkStatus }
-
+module.exports = { ex1, ex2, ex3, ex4, ex5, computeAverageScore, checkStatus };
