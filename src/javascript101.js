@@ -30,20 +30,21 @@ function ex2() {
             console.log(true != true)
 
     */
-  let firstPart =
-    5 +
-    "34" +
-    ("Bob" - "bill") +
-    (5 - "4") +
-    (5 % 10) +
-    (true + true) +
-    (false - true) +
-    (5 >= 1) +
-    ("A" > "B") +
-    ("a" > "A") +
-    (true != true);
+  // Cleaner way, using map to solve the concat to convert all results to a string then joining it together
+  const results = [
+    5 + "34",
+    "Bob" - "bill",
+    5 - "4",
+    5 % 10,
+    true + true,
+    false - true,
+    5 >= 1,
+    "A" > "B",
+    "a" > "A",
+    true != true,
+  ];
 
-  return firstPart; // e.g., the result of the first two expressions is "534NaN"
+  return results.map(String).join("");
 }
 
 function ex3(firstNumber, secondNumber) {
