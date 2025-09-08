@@ -55,6 +55,10 @@ function ex3(firstNumber, secondNumber) {
             - else return the string "NaN"
 
     */
+  if (typeof firstNumber === "number" && typeof secondNumber === "number") {
+    return firstNumber + secondNumber;
+  }
+  return "NaN";
 }
 
 function ex4(persons) {
@@ -77,8 +81,13 @@ function ex4(persons) {
 
         (in this example, the function return 44)
     */
-
-  return "";
+  let age = 9999;
+  for (let i = 0; i < persons.length; i++) {
+    if (persons[i].age < age) {
+      age = persons[i].age;
+    }
+  }
+  return age;
 }
 
 function ex5(str) {
@@ -91,8 +100,8 @@ function ex5(str) {
         **A palindrome is a string which reads the same backward as forward. For example, “Race Car” and “Anna” are palindromes. “Apple Pie” and “John” are not. Ignore spaces in deciding a palindrome.
 
     */
-
-  return "";
+  let newStr = str.toLowerCase().replace(/\s+/g, "");
+  return newStr == newStr.split("").reverse().join("");
 }
 
 function computeAverageScore(students) {
@@ -113,6 +122,11 @@ function computeAverageScore(students) {
 
     */
   let result = 0;
+  let totalScore = 0;
+  for (let i = 0; i < students.length; i++) {
+    totalScore += students[i].score;
+  }
+  result = totalScore / students.length;
 
   return result;
 }
@@ -128,6 +142,10 @@ function checkStatus(student) {
           
         (in this example, the function return 'Pass')
 */
+  if (student.score >= 50) {
+    return "Pass";
+  }
+  return "Fail";
 }
 
 module.exports = { ex1, ex2, ex3, ex4, ex5, computeAverageScore, checkStatus };
